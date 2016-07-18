@@ -1,6 +1,8 @@
-package impressor.objetos;
+package impressor.conversores;
 
-public interface ConversorAlgarismo {
+import impressor.objeto.NumeroDecimal;
+
+public interface Conversor {
 
 	/**
 	 * Valores utilizados pelas subclasses para representação dos algarismos
@@ -10,6 +12,10 @@ public interface ConversorAlgarismo {
 	static final String I = "I";
 	static final String V = "V";
 	static final String X = "X";
+	static final String XL = "XL";
+	static final String L = "L";
+	static final String XC = "XC";
+	static final String C = "C";
 
 	/**
 	 * Valores utilizados pelas subclasses para representação de valores
@@ -19,6 +25,10 @@ public interface ConversorAlgarismo {
 	static final Integer UM = 1;
 	static final Integer CINCO = 5;
 	static final Integer DEZ = 10;
+	static final Integer QUARENTA = 40;
+	static final Integer CINQUENTA = 50;
+	static final Integer NOVENTA = 90;
+	static final Integer CEM = 100;
 
 	/**
 	 * Detem a lógica necessária para conveter o <code>numero</code> informado
@@ -29,7 +39,7 @@ public interface ConversorAlgarismo {
 	 * 
 	 * @return Algarismo romano que representa o <code>numero</code>
 	 */
-	String getAlgarismoRomano(Integer numero);
+	String getAlgarismoRomano(NumeroDecimal decimal);
 
 	/**
 	 * Responsável pela definição de quais números o objeto está apto a
@@ -45,6 +55,6 @@ public interface ConversorAlgarismo {
 	 *         <code>numero</code>
 	 * 
 	 */
-	Boolean possoConverter(Integer numero);
+	Boolean possoConverter(NumeroDecimal decimal);
 
 }
