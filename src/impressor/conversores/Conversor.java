@@ -16,6 +16,10 @@ public interface Conversor {
 	static final String L = "L";
 	static final String XC = "XC";
 	static final String C = "C";
+	static final String CD = "CD";
+	static final String D = "D";
+	static final String CM = "CM";
+	static final String M = "M";
 
 	/**
 	 * Valores utilizados pelas subclasses para representação de valores
@@ -29,6 +33,10 @@ public interface Conversor {
 	static final Integer CINQUENTA = 50;
 	static final Integer NOVENTA = 90;
 	static final Integer CEM = 100;
+	static final Integer QUATROCENTOS = 400;
+	static final Integer QUINHENTOS = 500;
+	static final Integer NOVECENTOS = 900;
+	static final Integer MIL = 1000;
 
 	/**
 	 * Detem a lógica necessária para conveter o <code>numero</code> informado
