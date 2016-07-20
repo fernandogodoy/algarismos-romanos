@@ -10,12 +10,18 @@ import impressor.objeto.NumeroDecimal;
 import impressor.objetos.DecimalNumberDTO;
 import impressor.objetos.LoadFile;
 
-public class TresMilAMilTresNovecentosENoventaENove {
+/**
+ * Classe criada para comparação entre os valores contidos no arquivo 0-999.txt
+ * 
+ * @author Fernando
+ *
+ */
+public class TestePrimeiroArquivo {
 
 	@Test
 	public void testar() {
-		List<DecimalNumberDTO> list = LoadFile.loadFile("2000-2999.txt");
-		Assert.assertEquals(list.size(), 1000);
+		List<DecimalNumberDTO> list = LoadFile.loadFile("0-999.txt");
+		Assert.assertEquals(list.size(), 999);
 		for (DecimalNumberDTO numberObject : list) {
 			NumeroDecimal decimalNumber = new NumeroDecimal(numberObject.getNumero());
 			ImpressorAlgarismoRomano monitor = new ImpressorAlgarismoRomano(decimalNumber);

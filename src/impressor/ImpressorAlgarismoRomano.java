@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 import impressor.objeto.NumeroDecimal;
 
+/**
+ * Responsável por captar o valor digitado pelo usuário e apresentar o resultado
+ * da conversão ao final do processamento.
+ * 
+ * @author Fernando
+ *
+ */
 public class ImpressorAlgarismoRomano {
 
 	private final NumeroDecimal decimal;
@@ -21,9 +28,13 @@ public class ImpressorAlgarismoRomano {
 	}
 
 	public static void main(String[] args) {
-		NumeroDecimal numeroDecimal = getNumeroDigitado();
-		ImpressorAlgarismoRomano impressor = new ImpressorAlgarismoRomano(numeroDecimal);
-		impressor.escreverResultado();
+		try {
+			NumeroDecimal numeroDecimal = getNumeroDigitado();
+			ImpressorAlgarismoRomano impressor = new ImpressorAlgarismoRomano(numeroDecimal);
+			impressor.escreverResultado();
+		} finally {
+			sc.close();
+		}
 	}
 
 	public String toRomano() {

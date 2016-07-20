@@ -16,6 +16,12 @@ import impressor.conversores.X;
 import impressor.conversores.XC;
 import impressor.conversores.XL;
 
+/**
+ * Lista que contém todos conversores conhecidos.
+ * 
+ * @author Fernando
+ *
+ */
 public class ListaConversores {
 
 	static final List<Conversor> lista;

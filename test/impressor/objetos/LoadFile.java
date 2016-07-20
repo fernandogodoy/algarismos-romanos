@@ -9,16 +9,30 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Responsável por carregar os arquivos onde estão armazedos valores decimais e
+ * romano para cada numeral
+ * 
+ * @author Fernando
+ *
+ */
 public class LoadFile implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private static final Pattern COMPILE = Pattern.compile("(\\d+).*?(\\w+)", Pattern.DOTALL);
 
+	/**
+	 * Carrega o arquivo para memória
+	 * 
+	 * @param fileName
+	 * 
+	 * @return Lista de {@link DecimalNumberDTO}
+	 */
 	public static List<DecimalNumberDTO> loadFile(String fileName) {
 		List<DecimalNumberDTO> lista = new ArrayList<>();
 		Scanner sc = null;
-		try (InputStream stream = DecimalNumberDTO.class.getResourceAsStream("../../resources/"+fileName)) {
+		try (InputStream stream = DecimalNumberDTO.class.getResourceAsStream("../../resources/" + fileName)) {
 			sc = new Scanner(stream);
 			while (sc.hasNextLine()) {
 				Matcher matcher = COMPILE.matcher(sc.nextLine());
@@ -29,7 +43,7 @@ public class LoadFile implements Serializable {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			sc.close();
 		}
 		return lista;

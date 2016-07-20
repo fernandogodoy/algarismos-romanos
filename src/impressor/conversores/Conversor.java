@@ -2,6 +2,12 @@ package impressor.conversores;
 
 import impressor.objeto.NumeroDecimal;
 
+/**
+ * Definição para implementação de conversores
+ * 
+ * @author Fernando
+ *
+ */
 public interface Conversor {
 
 	/**

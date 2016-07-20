@@ -10,7 +10,14 @@ import impressor.objeto.NumeroDecimal;
 import impressor.objetos.DecimalNumberDTO;
 import impressor.objetos.LoadFile;
 
-public class DoisMilAMilDoisNovecentosENoventaENove {
+/**
+ * Classe criada para comparação entre os valores contidos no arquivo
+ * 2000-2999.txt
+ * 
+ * @author Fernando
+ *
+ */
+public class TesteTerceiroArquivo {
 
 	@Test
 	public void testar() {
